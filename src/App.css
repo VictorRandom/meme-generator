@@ -1,50 +1,89 @@
-
-.navbar{
-
-    background-image: linear-gradient(to right, #672280, #A626D3);
-
-    display: flex;
-    justify-content: space-between;
-
-    height: 65px;
-    width: 550px;
+* {
+  box-sizing: border-box;
 }
 
-#logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-left: 20px;
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
 }
 
-#title{
-    font-family: Karla;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20.7482px;
-    line-height: 24px;
-    letter-spacing: -0.1em;
-
-    color: #FFFFFF;
-
-    margin-left: 5px;
+main{
+    padding: 36px;
 }
 
-#info{
+.navbar {
+  background-image: linear-gradient(to right, #672280, #a626d3);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
 
-    font-family: Inter;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    text-align: right;
-    
-    color: #FFFFFF;
+  height: 65px;
+}
 
-    margin-right: 20px;
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 20px;
+}
+
+#title {
+  font-family: Karla;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20.7482px;
+  line-height: 24px;
+  letter-spacing: -0.1em;
+
+  color: #ffffff;
+
+  margin-left: 5px;
+}
+
+#info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+
+  color: #ffffff;
+
+  margin-right: 20px;
+}
+
+.form{
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+}
+ 
+
+
+#text1,
+#text2 {
+    font-family: "Karla", sans-serif;
+  width: 40vw;
+  height: 35px;
+
+  border: 1px solid #d5d4d8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #D5D4D8;
+  text-indent: 5px;
+}
+
+.form--button {
+    font-family: "Karla", sans-serif;
+    grid-column: 1/-1;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
 }
