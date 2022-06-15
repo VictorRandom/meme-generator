@@ -9,8 +9,10 @@ export default function Form() {
     bottomText: "",
   });
 
+  // Criando um estado para o meme inicial
   const [allMemes, setAllMemes] = useState(memesData)
 
+  // Função para retornar uma imagem aleatória de meme
   function getImage() {
     const memeArray = allMemes.data.memes;
     const oneMeme = Math.floor(Math.random() * memeArray.length);
@@ -42,7 +44,7 @@ export default function Form() {
           Get a new meme image 🖼
         </button>
       </div>
-      <img src={meme.randomImage} className="meme--image" />
+      <img src={meme.randomImage}  className="meme--image" />
     </main>
   );
 }
