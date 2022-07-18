@@ -61,8 +61,16 @@ main{
 .form{
     display: grid;
     grid-template: 40px 40px / 1fr 1fr;
+    gap: 17px;
+    margin-bottom: 17px;
 }
  
+.form--input {
+    font-family: "Karla", sans-serif;
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
 
 .form--button {
     font-family: "Karla", sans-serif;
@@ -74,18 +82,17 @@ main{
     cursor: pointer;
 }
 
-.meme--image{
-  max-width: 100%;
-
-}
-
 .meme {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .meme--image {
   max-width: 100%;
   border-radius: 3px;
+  left: 50%;
 }
 
 .meme--text {

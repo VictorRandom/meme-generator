@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import memesData from "./memesData";
+import React, { useState, useEffect } from "react";
+// import memesData from "./memesData";
 
 export default function Form() {
   let url;
   const [meme, setMeme] = useState({
     randomImage: "http://i.imgflip.com/1bij.jpg",
-    topText: "",
-    bottomText: "",
+    topText: "one does not simply",
+    bottomText: "walk into mordor",
   });
 
   // Criando um estado para o meme inicial
-  const [allMemes, setAllMemes] = useState(memesData)
+  const [allMemes, setAllMemes] = useState([])
 
   // Função para retornar uma imagem aleatória de meme
   function getImage() {
-    const memeArray = allMemes.data.memes;
-    const oneMeme = Math.floor(Math.random() * memeArray.length);
-    url = memeArray[oneMeme].url;
+    // const memeArray = allMemes;
+    const oneMeme = Math.floor(Math.random() * allMemes.length);
+    url = allMemes[oneMeme].url;
 
     setMeme(prevMeme =>({
       ...prevMeme,
@@ -34,7 +34,13 @@ export default function Form() {
 
     })
   )}
-  
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+      .then(res => res.json())
+      .then(data => setAllMemes(data.data.memes))
+  }, [])
+
 
   return (
     <main>
